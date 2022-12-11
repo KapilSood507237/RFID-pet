@@ -91,7 +91,7 @@ if ( ! mfrc522.PICC_IsNewCardPresent()) {
 Serial.println ("Sending Message please wait….");
 SIM900A.println("AT+CMGF=1"); //Text Mode initialisation
 delay(1000);
-Serial.println ("9459757792");
+Serial.println ("*");    //Replace * by numner
 SIM900A.println("AT+CMGS=\"+91*\"\r"); // Receiver’s Mobile Number instead of *
 delay(1000);
 Serial.println ("Oscar has been fed!");
@@ -105,8 +105,8 @@ Serial.println ("Message sent succesfully");
 Serial.println ("Sending Message please wait….");
 SIM900A.println("AT+CMGF=1"); //Text Mode initialisation
 delay(1000);
-Serial.println ("9459757792");
-SIM900A.println("AT+CMGS=\"+919459757792\"\r"); // Receiver’s Mobile Number
+Serial.println ("*");
+SIM900A.println("AT+CMGS=\"+*\"\r"); // Receiver’s Mobile Number
 delay(1000);
 Serial.println ("Oreo has been fed!");
 SIM900A.println("Oreo has been fed!");// Messsage content
